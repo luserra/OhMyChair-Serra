@@ -1,0 +1,9 @@
+.cart-icon {
+    cursor: pointer;
+    color: var(--primary-color);
+    margin: 0 0.5rem;
+}
+
+.cart-icon:hover {
+    color: var(--secondary-color);
+}

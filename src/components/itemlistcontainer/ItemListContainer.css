@@ -1,0 +1,11 @@
+.container {
+    padding: 5rem;
+}
+
+.title-container {
+    font-family: var(--font-1);
+    color: var(--primary-color);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.3rem;
+}
