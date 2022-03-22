@@ -9,7 +9,7 @@ function App() {
     <>
       <NavBar />
       <MainSection />
-      <ItemListContainer />
+      <ItemListContainer firstTitle={'Proximamente catálogo online!'} />
     </>
     );
 }

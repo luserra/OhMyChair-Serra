@@ -1,11 +1,11 @@
 import './ItemListContainer.css'
 
-function ItemListContainer() {
+const ItemListContainer = ({firstTitle}) => {
 
     return (
         <>
         <div className='container'>
-            <h2 className='title-container'>Próximamente catálogo online!</h2>
+            <h2 className='title-container'>{firstTitle}</h2>
         </div>
         </>
     );
