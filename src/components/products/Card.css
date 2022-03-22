@@ -1,0 +1,14 @@
+.card-item {
+    text-align: center;
+    padding-bottom: 5rem;
+    border: 1px solid var(--primary-color);
+    margin: 2rem 4rem;
+    padding: 2rem;
+    width: 30vw;
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+.img-item {
+    width: 25vw;
+}
