@@ -7,7 +7,8 @@ function NavBar() {
       <>
       <header>
         <nav>
-          <h1 className='logo'>OH MY CHAIR!</h1>
+         
+          <img src='/assets/images/Logo-oh-my-chair.svg' alt='Logo' className='logo' />
           <ul>
               <li className='btn-nav'>Productos</li>
               <li className='btn-nav'>Nosotros</li>

@@ -3,6 +3,7 @@ import './ItemCount.css';
 
 const ItemCount = ({stock, onAdd}) => {
     const [quantity, setQuantity] = useState(1);
+   // const [count, setCount] = useState(1);
 
     const addItem = () => {
         if (quantity < stock) {
@@ -23,8 +24,10 @@ const ItemCount = ({stock, onAdd}) => {
                 <button className='btn-quantity' onClick={removeItem}>-</button>
                 <p className='p-quantity'>{quantity}</p>
                 <button className='btn-quantity' onClick={addItem}>+</button>
+
             </div>
             <button className='add-cart' onClick={()=>onAdd(quantity)}>Añadir al carrito</button>
+
         </>
     );
 }
