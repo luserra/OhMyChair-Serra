@@ -15,7 +15,7 @@ const ItemList = () => {
         }, 2000);
       });
 
-    // 3. Llamo a la promesa, acá traería los productos desde una DB (con fetch?)
+    // 3. Llamo a la promesa, acá traería los productos desde una DB con fetch
     const getItemsList = async () => {
         try {
           const result = await getItems;

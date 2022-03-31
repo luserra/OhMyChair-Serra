@@ -1,0 +1,27 @@
+.items-left {
+    display: grid;
+    width: 100%;
+    justify-items: center;
+}
+
+.title-detail {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.description-detail {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.price-detail {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.cart-item-detail {
+    display: grid;
+    justify-items: start;
+}
