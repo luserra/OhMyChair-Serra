@@ -1,8 +1,6 @@
 import './ItemDetail.css'
 import ItemCount from "./ItemCount";
 
-
-
 const ItemDetail = ( { item } ) => {
     
     const { id, image, title, price, stock, description} = item;
@@ -18,7 +16,7 @@ const ItemDetail = ( { item } ) => {
     return(
         <>
             <div className='items-left'>
-                <img className='img-detail' src={image} alt={image} />
+                <img className='img-detail' src={`/${image}`} alt={image} />
             </div>
             
             <div className='items-right'>

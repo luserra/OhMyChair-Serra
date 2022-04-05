@@ -1,4 +1,5 @@
 .primary-slider {
     width: 100%;
     overflow: hidden;
+    z-index: 2;
 }

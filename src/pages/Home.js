@@ -6,8 +6,7 @@ const HomePage = () => {
     return (
         <>
             <MainSection />
-            <ItemListContainer firstTitle={'Productos'} />
-            <ItemDetailContainer />
+            <ItemListContainer firstTitle={'Productos'}/>
         </>
     )
 };

@@ -1,38 +1,42 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import './ItemList.css';
 import Item from './Item';
-import { productsList } from '../../data/products.js';
+import productsList from '../../data/products.js';
 
-const ItemList = () => {
+const ItemList = ({firstTitle}) => {
+    
+    const { category } = useParams()
 
-    // 1. Declaro items y le indico que va a ser un array - useState
     const [items, setItems] = useState([]);
 
-    // 2. Simulo el tiempo de retardo del servidor donde estaría la DB con los productos
-    const getItems = new Promise((resolve, reject) => {
+    const getItems = () => {
+      return new Promise((resolve, reject) => {
         setTimeout(() => {
-          resolve(productsList);
-        }, 2000);
-      });
+            return resolve(productsList)
+        }, 2000); 
+      })
+    } 
 
-    // 3. Llamo a la promesa, acá traería los productos desde una DB con fetch
-    const getItemsList = async () => {
-        try {
-          const result = await getItems;
-          setItems(result);
-        } catch (err) {
-          console.log('Error: ' + err);
-        }
-    };
+    useEffect( () => {
+      setItems([])
+      getItems().then( (items) => {
+          category ? filterProductByCategory(items, category) : setItems(items)
+        })
+    }, [category])
 
-    // 4. Traigo los productos en el montaje del componente - useEffect
-    useEffect(() => {
-        getItemsList();
-      }, []);
-      
-    // 5. Armo el listado, con map recorro el array de productos y muestro el componente Item
+    const filterProductByCategory = (array , category) => {
+      return array.map( (item, i) => {
+          if(item.category === category) {
+              return setItems(items => [...items, item]);
+          }
+      })
+    }
+
     return (
-        <div className='list-container'>
+      <>
+      <h2 className='title-container'>{firstTitle}</h2>
+        <div className='list-container'>   
         {
         items.length ? ( 
           <>
@@ -48,10 +52,11 @@ const ItemList = () => {
             }
           </>
         ) : (
-          <p>Cargando...</p>
+          <p className='load'>Cargando...</p>
         ) 
       }
         </div>
+      </>
       
     );
   }
