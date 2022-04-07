@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from './components/navbar/NavBar';
 import ItemListContainer from './components/products/ItemListContainer';
 import ItemDetailContainer from './components/products/ItemDetailContainer';
+import Cart from './components/products/Cart';
 
 // Pages
 import HomePage from '././pages/Home';
@@ -29,6 +30,7 @@ function App() {
             <Route path='/productos/:category/:id' element={<DetailPage />} />
             <Route path='/contacto' element={ <ContactPage />} />
             <Route path='/nosotros' element={ <h2 className='title-container' style={{textAlign:'center'}}>Estamos contruyendo nuestra historia (:</h2>} />
+            <Route path='/cart' element={ <Cart />} />
             <Route path='*' element={ <NotFoundPage />} />
 
           </Routes>
