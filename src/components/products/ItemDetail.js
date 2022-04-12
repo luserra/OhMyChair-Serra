@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 const ItemDetail = () => {
     const { id, category } = useParams()
     const [product, setProduct] = useState({})
-
     const [quantity, setQuantity] = useState(1);
+    const [button, setButton] = useState(true)
 
     useEffect( () => {
         filterProductById(productsList, id)
@@ -24,11 +24,8 @@ const ItemDetail = () => {
         })
     }
 
-
-    // funcion onAdd declarada en el padre y pasarla como props al hijo 
     useEffect( () => {
-        console.log('montar evento')
-        
+        console.log('montar evento')        
         return () => {
             console.log('desmontar evento')
         }
@@ -38,6 +35,7 @@ const ItemDetail = () => {
         if (quantity >= 1) {
             setQuantity(quantity)
             console.log(quantity)
+            setButton(false)
         }
     }    
     
@@ -54,12 +52,14 @@ const ItemDetail = () => {
                 <p className='price-detail'>$ {product.price}</p>
                 <div className="cart-item-detail" >
 
+                { button ? (
                         <ItemCount stock={product.stock} onAdd={onAdd} />
-
+                ) : (
                         <Link to={'/cart'}>  
                             <button className='add-cart'>Terminar mi compra</button>
                         </Link>
-                     
+                )
+                }     
                 </div> 
 
              
