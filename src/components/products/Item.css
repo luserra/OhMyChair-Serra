@@ -8,8 +8,20 @@
     border-radius: 2px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
+    line-height: 1.3rem;
 }
 
 .img-item {
     width: 20vw;
+}
+
+.title-item {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    line-height: 2rem;
+}
+
+.category-item {
+    text-transform: capitalize;
+    font-size: 1rem;
 }

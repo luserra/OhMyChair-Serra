@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import './ItemList.css';
 import Item from './Item';
 import productsList from '../../data/products.js';
+import { CircularProgress } from '@mui/material';
 
 const ItemList = ({firstTitle}) => {
     
@@ -52,7 +53,9 @@ const ItemList = ({firstTitle}) => {
             }
           </>
         ) : (
-          <p className='load'>Cargando...</p>
+          <div  className='load'> 
+            <CircularProgress disableShrink /> 
+          </div>
         ) 
       }
         </div>

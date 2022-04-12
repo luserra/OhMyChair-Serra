@@ -1,4 +1,3 @@
-import './ItemDetail.css'
 
 const Cart = ( ) => {
     

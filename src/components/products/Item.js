@@ -1,19 +1,10 @@
-import React from 'react';
 import './Item.css'
-import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 
 const Item = ({ item }) => {
 
     const {id, image, title, category, price, stock} = item;
 
-    const onAdd = (quantity) => {
-        if (quantity === 1) {
-            alert(`Felicitaciones! Agregaste ${quantity} producto al carrito`)
-        } else if (quantity > 1) {
-            alert(`Felicitaciones! Agregaste ${quantity} productos al carrito`)
-        }
-    }
 
     return(
         <>
@@ -21,11 +12,14 @@ const Item = ({ item }) => {
                 <div className='card-item'>
                 <Link to={`/productos/${category}/${id}`}> 
                     <img className='img-item' src={`/${image}`} alt={image} />
-                    <h4 className='title-item'>{title}</h4>
                 </Link>
+                    <h4 className='title-item'>{title}</h4>
+                
                     <p className='category-item'>{category}</p>
                     <p className='price-item'>$ {price}</p>
-                    <ItemCount stock={stock} onAdd={onAdd} />
+                <Link to={`/productos/${category}/${id}`}>
+                   <button className='add-cart'>Ver detalle</button>
+                </Link>
                 </div>
             
         </>

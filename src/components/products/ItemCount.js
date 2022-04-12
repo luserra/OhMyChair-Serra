@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 const ItemCount = ({stock, onAdd}) => {
     const [quantity, setQuantity] = useState(1);
-   // const [count, setCount] = useState(1);
 
     const addItem = () => {
         if (quantity < stock) {
@@ -27,9 +26,7 @@ const ItemCount = ({stock, onAdd}) => {
                 <button className='btn-quantity' onClick={addItem}>+</button>
 
             </div>
-            <Link to={'/cart'}>  
-                <button className='add-cart' onClick={()=>onAdd(quantity)}>Añadir al carrito</button>
-            </Link>
+                <button className='add-cart' onClick={()=>onAdd(quantity) }>Añadir al carrito</button>
         </>
     );
 }
