@@ -7,7 +7,7 @@ import CartContext from '../../context/CartContext';
 function NavBar() {
 
   const { cart, setCart } = useContext(CartContext);
-  console.log('Context navbar: ', cart)
+  console.log('Productos navbar: ', cart)
 
   return (
       <>
@@ -19,16 +19,18 @@ function NavBar() {
           <ul>
             
            <li className='category'>
-             <Link to='/productos/'><p className='item-nav'>Productos</p></Link>
+             <p className='item-nav'>Productos</p>
               <ul className="submenu">
                   <li><Link to="/productos/sillas" className="item-nav">Sillas</Link></li>
                   <li><Link to="/productos/sillones" className="item-nav">Sillones</Link></li>
+                  <li> <Link to='/productos/' className="item-nav">Todos</Link></li>
               </ul>
            </li>
 
               <Link to='/nosotros'><li className='item-nav'>Nosotros</li></Link>
-              <Link to='/contacto'><li className='item-nav'>Contacto</li></Link>           
-              <CartWidget />
+              <Link to='/contacto'><li className='item-nav'>Contacto</li></Link>
+              <Link to='/cart'><CartWidget /></Link>        
+              
           </ul>
         </nav>
       </header>

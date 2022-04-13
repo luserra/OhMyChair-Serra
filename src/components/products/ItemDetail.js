@@ -26,9 +26,6 @@ const ItemDetail = () => {
 
     useEffect( () => {
         console.log('montar evento')        
-        return () => {
-            console.log('desmontar evento')
-        }
     }, [])
    
     const onAdd = (quantity) => {

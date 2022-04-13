@@ -4,6 +4,8 @@ import './ItemList.css';
 import Item from './Item';
 import productsList from '../../data/products.js';
 import { CircularProgress } from '@mui/material';
+//import db from '../../firebase';
+//import { collection, getDocs } from 'firebase/firestore';
 
 const ItemList = ({firstTitle}) => {
     
@@ -18,6 +20,20 @@ const ItemList = ({firstTitle}) => {
         }, 2000); 
       })
     } 
+
+
+    // firebase
+   /*  const getItems = async () => {
+      const ItemsCollection = collection(db, 'products')
+      const productsSnapshot = await getDocs(ItemsCollection)
+      console.log('productosSnapshop: ', productsSnapshot)
+      const productList = productsSnapshot.docs.map((doc)=> {
+          console.log(doc.data());
+        }
+      )
+    }  */
+
+
 
     useEffect( () => {
       setItems([])

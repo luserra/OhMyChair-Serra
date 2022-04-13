@@ -10,7 +10,7 @@ const Item = ({ item }) => {
     const {cart, addProductToCart} = useContext(CartContext);
 
     useEffect(() => {
-        console.log('Productos en el carrito', cart)
+        console.log('Productos', cart)
     }, []);
 
     const addToCart = (e) => {
