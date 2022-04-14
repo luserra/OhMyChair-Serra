@@ -7,10 +7,9 @@ import { CircularProgress } from '@mui/material';
 //import db from '../../firebase';
 //import { collection, getDocs } from 'firebase/firestore';
 
-const ItemList = ({firstTitle}) => {
+const ItemList = () => {
     
     const { category } = useParams()
-
     const [items, setItems] = useState([]);
 
     const getItems = () => {
@@ -32,8 +31,6 @@ const ItemList = ({firstTitle}) => {
         }
       )
     }  */
-
-
 
     useEffect( () => {
       setItems([])

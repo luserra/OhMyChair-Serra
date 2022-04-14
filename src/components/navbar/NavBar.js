@@ -7,7 +7,7 @@ import CartContext from '../../context/CartContext';
 function NavBar() {
 
   const { cart, setCart } = useContext(CartContext);
-  console.log('Productos navbar: ', cart)
+  //console.log('Productos navbar: ', cart)
 
   return (
       <>

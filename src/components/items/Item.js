@@ -19,7 +19,6 @@ const Item = ({ item }) => {
         addProductToCart(item)
     }
 
-
     return(
         <>
             
@@ -32,9 +31,9 @@ const Item = ({ item }) => {
                     <p className='category-item'>{category}</p>
                     <p className='price-item'>$ {price}</p>
                 <Link to={`/productos/${category}/${id}`}>
-                   <button className='add-cart'>Ver detalle</button>
+                   <button className='btn-primary'>Ver detalle</button>
                 </Link>
-                   <button className='add-cart' onClick={addToCart}>Agregar al carrito</button> 
+                   <button className='btn-primary' onClick={addToCart}>Agregar al carrito</button> 
                 </div>
             
         </>

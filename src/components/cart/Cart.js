@@ -1,18 +1,50 @@
 import { useContext } from 'react';
-//import CartContext from '../../context/CartContext';
+import CartContext from '../../context/CartContext';
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import './Cart.css';
+
 const Cart = ( ) => {
    
-    //const { cart } = useContext(CartContext);
+    const { cart, clearCart, removeItem } = useContext(CartContext);
 
     return(
-        <>
-            <h2 className='title-detail' style={{margin:'5rem', textTransform:'uppercase'}}>Carrito</h2>
+        <div className='cart-container'>
             
-                 <div>
-                     <h3 style={{margin:'3rem'}}>TOTAL</h3>
-                        {/* <p>Productos agregados al carrito: {cart}</p> */}
+            <h2 className='title-container'>Carrito</h2>
+            
+                <div className='ctable-container'>
+                    <div className='ctable-item'>
+                        <img className='img-cart' src='assets/images/silla-tossberd.jpg' alt='silla 1' />
+                    </div>
+
+                     <div className='ctable-item'>
+                        <h3>Producto</h3>
+                        <p>Silla 1</p>
+                     </div>
+
+                     <div className='ctable-item'>
+                        <h3>Precio</h3>
+                        <p>$45000</p>
+                     </div>
+
+                     <div className='ctable-item'>
+                        <h3>Cantidad</h3>
+                        <p>2</p>
+                     </div>
+
+                     <div className='ctable-item'>
+                        <h3>Subtotal</h3>
+                        <p>$90000</p>
+                     </div>
+
+                     <div className='ctable-item' onClick={removeItem}>
+                        <h3>Eliminar</h3>
+                        <HighlightOffIcon className="cart-icon" fontSize="large" />
+                     </div>
                 </div>
-        </>
+            <button className='checkout btn-primary' onClick={clearCart}>Vaciar carrito</button>
+            <button className='checkout btn-primary'>Finalizar compra</button>    
+        </div>
     )
 }
 
