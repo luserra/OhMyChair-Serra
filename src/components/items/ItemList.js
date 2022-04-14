@@ -52,7 +52,6 @@ const ItemList = ({firstTitle}) => {
 
     return (
       <>
-      <h2 className='title-container'>{firstTitle}</h2>
         <div className='list-container'>   
         {
         items.length ? ( 

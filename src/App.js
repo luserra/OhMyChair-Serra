@@ -3,10 +3,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Components
 import NavBar from './components/navbar/NavBar';
-import ItemListContainer from './components/products/ItemListContainer';
-import ItemList from './components/products/ItemList';
+import ItemListContainer from './components/items/ItemListContainer';
+import ItemDetailContainer from './components/itemdetail/ItemDetailContainer';
 import Cart from './components/cart/Cart';
-import ItemDetailContainer from './components/products/ItemDetailContainer';
+import Footer from './components/footer/Footer';
 
 // Pages
 import HomePage from '././pages/Home';
@@ -19,7 +19,6 @@ import { CartProvider } from './context/CartContext';
 
 function App() {
 
-
   return (
     <>
       <CartProvider>
@@ -28,13 +27,14 @@ function App() {
             <Routes>
               <Route path='/' element={ <HomePage />} />
               <Route path='/productos' element={ <ItemListContainer firstTitle={'Todos los productos'} /> } />
-              <Route path='/productos/:category' element={ <ItemList firstTitle={''} /> } />
+              <Route path='/productos/:category' element={ <ItemListContainer firstTitle={'category.name'} /> } />
               <Route path='/productos/:category/:id' element={<ItemDetailContainer />} />
               <Route path='/contacto' element={ <ContactPage />} />
-              <Route path='/nosotros' element={ <h2 className='title-container' style={{textAlign:'center'}}>Estamos contruyendo nuestra historia (:</h2>} />
+              <Route path='/nosotros' element={ <HomePage />} />
               <Route path='/cart' element={ <Cart />} />
               <Route path='*' element={ <NotFoundPage />} />
             </Routes>
+          <Footer />
         </BrowserRouter>
       </CartProvider>
     </>

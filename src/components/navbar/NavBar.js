@@ -23,7 +23,7 @@ function NavBar() {
               <ul className="submenu">
                   <li><Link to="/productos/sillas" className="item-nav">Sillas</Link></li>
                   <li><Link to="/productos/sillones" className="item-nav">Sillones</Link></li>
-                  <li> <Link to='/productos/' className="item-nav">Todos</Link></li>
+                  <li> <Link to='/productos/' className="item-nav">Ver todos</Link></li>
               </ul>
            </li>
 

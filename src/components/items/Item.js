@@ -34,7 +34,7 @@ const Item = ({ item }) => {
                 <Link to={`/productos/${category}/${id}`}>
                    <button className='add-cart'>Ver detalle</button>
                 </Link>
-                    <button className='add-cart' onClick={addToCart}>Agregar al carrito</button>
+                   <button className='add-cart' onClick={addToCart}>Agregar al carrito</button> 
                 </div>
             
         </>

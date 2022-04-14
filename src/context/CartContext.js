@@ -5,6 +5,7 @@ const CartContext = createContext();
 const CartProvider = ({children}) => {
     const [cart, setCart] = useState([]);
 
+    console.log('cart hoy', {cart});
 
     const addProductToCart = (product) => {
         console.log('Producto agregado: ', product)

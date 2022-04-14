@@ -1,7 +1,7 @@
 header nav {
     width: 100%;
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 58% 42%;
     align-items: center;
 }
 
@@ -14,7 +14,7 @@ ul {
     display: flex;
     list-style: none;
     flex-direction: row;
-    gap: 3rem;
+    gap: 4rem;
 }
 
 .item-nav {
@@ -23,9 +23,8 @@ ul {
     font-size: 1.1rem;
     font-family: var(--font-1);
     cursor: pointer;
-    padding: 5px;
+    padding: 0.4rem 1rem;
     display: flex;
-    gap: 10px;
     text-decoration: none;
     z-index: 100;
 }
@@ -46,14 +45,18 @@ ul {
     list-style: none;
     position: absolute;
     z-index: 1000;
-    padding: 1rem;
+    padding: 0;
     background-color: var(--white);
+    border: 0;
 }
 
 .category:hover > .submenu{
     display: block;
+
 }
 
 .submenu .item-nav:hover{
     color: var(--branding);
+    border: 0;
+    border-radius: 0;
 }

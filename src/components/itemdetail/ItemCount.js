@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './ItemCount.css';
-import { Link } from "react-router-dom";
 
 const ItemCount = ({stock, onAdd}) => {
     const [quantity, setQuantity] = useState(1);

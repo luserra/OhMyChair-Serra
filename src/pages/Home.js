@@ -1,12 +1,13 @@
 import MainSection from '../components/mainsection/MainSection';
-import ItemListContainer from '../components/products/ItemListContainer';
-import ItemDetailContainer from '../components/products/ItemDetailContainer'
+import ItemListContainer from '../components/items/ItemListContainer';
+import AboutUs from '../components/about/AboutUs';
 
 const HomePage = () => {
     return (
         <>
             <MainSection />
             <ItemListContainer firstTitle={'Productos'}/>
+            <AboutUs />
         </>
     )
 };

@@ -1,0 +1,11 @@
+.text-about {
+    text-align: start;
+    font-size: 1.1rem;
+}
+
+.text-about span {
+    font-weight: bold;
+    display: block;
+    font-size: 1.2rem;
+    text-align: center;
+}
