@@ -17,14 +17,22 @@
 }
 
 .ctable-item p {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 
 .img-cart {
-    width: 5rem;
+    width: 5.5rem;
 }
 
-.checkout {
-    margin: 0 5rem;
+
+.total-container {
+    display: grid;
+    justify-content: end;
+    margin: 1rem 5rem;
+}
+
+.cart-total {
+    font-size: 1.3rem;
+    text-align: end;
 }

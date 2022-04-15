@@ -7,7 +7,7 @@ const Item = ({ item }) => {
 
     const {id, image, title, category, price, stock} = item;
 
-    const {cart, addProductToCart} = useContext(CartContext);
+   /*  const {cart, addProductToCart} = useContext(CartContext);
 
     useEffect(() => {
         console.log('Productos', cart)
@@ -18,7 +18,7 @@ const Item = ({ item }) => {
         console.log("Productos en el carrito ", cart)
         addProductToCart(item)
     }
-
+ */
     return(
         <>
             
@@ -33,7 +33,7 @@ const Item = ({ item }) => {
                 <Link to={`/productos/${category}/${id}`}>
                    <button className='btn-primary'>Ver detalle</button>
                 </Link>
-                   <button className='btn-primary' onClick={addToCart}>Agregar al carrito</button> 
+                  {/*  <button className='btn-primary' onClick={addToCart}>Agregar al carrito</button>  */}
                 </div>
             
         </>

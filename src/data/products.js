@@ -4,7 +4,7 @@ const productsList = [
         image: 'assets/images/silla-tossberd.jpg',
         title: 'Silla Tossberg',
         category: 'sillas',
-        price: '45.000',
+        price: 45000,
         stock: 5,
         description: 'Aporta un aire retro de lo más estiloso al espacio, y se inspira en un diseño escandinavo de los años cincuenta. Ponlo en el salón, el dormitorio o el vestíbulo y disfruta de un asiento cómodo de estilo clásico.'
     },
@@ -13,7 +13,7 @@ const productsList = [
         image: 'assets/images/silla-fanbyn.jpg',
         title: 'Silla Fanbyn',
         category: 'sillas',
-        price: '42.000',
+        price: 42000,
         stock: 8,
         description: 'Aporta un aire retro de lo más estiloso al espacio, y se inspira en un diseño escandinavo de los años cincuenta. Ponlo en el salón, el dormitorio o el vestíbulo y disfruta de un asiento cómodo de estilo clásico.'
     },
@@ -22,7 +22,7 @@ const productsList = [
         image: 'assets/images/silla-stockholm.jpg',
         title: 'Silla Stockholm',
         category: 'sillas',
-        price: '48.000',
+        price: 48000,
         stock: 2,
         description: 'Aporta un aire retro de lo más estiloso al espacio, y se inspira en un diseño escandinavo de los años cincuenta. Ponlo en el salón, el dormitorio o el vestíbulo y disfruta de un asiento cómodo de estilo clásico.'
     },
@@ -31,7 +31,7 @@ const productsList = [
         image: 'assets/images/sillon-strandmon.jpg',
         title: 'Sillón Strandmon',
         category: 'sillones',
-        price: '62.000',
+        price: 62000,
         stock: 4,
         description: 'Aporta un aire retro de lo más estiloso al espacio, y se inspira en un diseño escandinavo de los años cincuenta. Ponlo en el salón, el dormitorio o el vestíbulo y disfruta de un asiento cómodo de estilo clásico.'
     },
@@ -40,7 +40,7 @@ const productsList = [
         image: 'assets/images/sillon-bakla.jpg',
         title: 'Sillón Bakla',
         category: 'sillones',
-        price: '73.000',
+        price: 73000,
         stock: 1,
         description: 'Aporta un aire retro de lo más estiloso al espacio, y se inspira en un diseño escandinavo de los años cincuenta. Ponlo en el salón, el dormitorio o el vestíbulo y disfruta de un asiento cómodo de estilo clásico.'
     },
@@ -49,7 +49,7 @@ const productsList = [
         image: 'assets/images/sillon-ekenaset.jpg',
         title: 'Sillón Ekenaset',
         category: 'sillones',
-        price: '58.000',
+        price: 58000,
         stock: 3,
         description: 'Aporta un aire retro de lo más estiloso al espacio, y se inspira en un diseño escandinavo de los años cincuenta. Ponlo en el salón, el dormitorio o el vestíbulo y disfruta de un asiento cómodo de estilo clásico.'
     },

@@ -7,13 +7,13 @@ import CartContext from '../../context/CartContext';
 
 function CartWidget() {
 
-  const { cart } = useContext(CartContext);
+  const { cart, cantidad } = useContext(CartContext);
 
     return (
         <>
         <div className='cart-widget'>     
             <AddShoppingCartIcon className="cart-icon" fontSize="medium" />
-              <p>{cart.length}</p>  
+              <p>{cantidad.length}</p>  
             
             {/* <FavoriteBorderIcon className="cart-icon" fontSize="medium"></FavoriteBorderIcon> */}             
         </div>

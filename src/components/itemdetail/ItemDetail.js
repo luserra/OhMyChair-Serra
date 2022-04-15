@@ -10,9 +10,8 @@ import CartContext from '../../context/CartContext';
 
 const ItemDetail = () => {
     // declaro constantes para filtrar por ID el producto y traerlo:
-    const { id } = useParams() // para traer desde la URL el id 
-    const [product, setProduct] = useState({}) // para traer el objeto del producto por ID
-    console.log('producto que trae por id: ', product);
+    const { id } = useParams() 
+    const [product, setProduct] = useState({}) 
 
     // declaro la cantidad inicial para después ir guardandola cada vez que se ejecuta onAdd:
     const [quantity, setQuantity] = useState(1); 
@@ -34,19 +33,19 @@ const ItemDetail = () => {
         })
     }
    
+    const { addItem, removeItem } = useContext(CartContext);
+    
+
     // declaro la función onAdd que se va a ejecutar cada vez que clickeo en agregar al carrito desde ItemCount
     const onAdd = (quantity) => {
         if (quantity >= 1) {
-            setQuantity(quantity)
-            console.log('Quantity onAdd(): ', quantity)
+            //setQuantity(quantity)
+            addItem( {...product, cantidad: quantity} )
             setButton(false)
+            console.log('cantidad que agrego: ', quantity)            
         }
     }    
     
-
-    const { removeItem } = useContext(CartContext);
-
-
     return(
         
         <div className='container-detail'>
@@ -78,7 +77,8 @@ const ItemDetail = () => {
                         
                     </div>
                 )
-                }     
+                }
+
                 </div> 
 
              
