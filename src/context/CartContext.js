@@ -4,7 +4,6 @@ const CartContext = createContext();
 
 const CartProvider = ({children}) => {
     const [cart, setCart] = useState([]);
-    const [button, setButton] = useState(true)
 
     //console.log('cart: ', {cart});
     /*  const addProductToCart = (product) => {
@@ -30,14 +29,12 @@ const CartProvider = ({children}) => {
          } else {
              console.log('el carrito estaba vacío')
              setCart(cart => [...cart, item])
-             console.log('cantidad total: ', cantidad)
          }
     }
 
     const removeItem = (id) => {
-        console.log('Elimino el producto')
         setCart(cart.filter(p => p.id !== id));
-        setButton(true)
+        console.log('Elimino el producto')
     }
 
     const clearCart = () => {

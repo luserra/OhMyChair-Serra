@@ -46,9 +46,10 @@ const Cart = ( ) => {
                         <p>{prod.cantidad}</p>
                      </div>
 
-                     <div className='ctable-item' onClick={removeItem}>
+                     <div className='ctable-item'>
                         <h3>Eliminar</h3>
-                        <HighlightOffIcon className="cart-icon" fontSize="large" onClick={() => removeItem(prod.id)}/>
+                        <HighlightOffIcon className="cart-icon" fontSize="large" 
+                        onClick={() => removeItem(prod.id)}/>
                      </div>
                 </div>
             ))

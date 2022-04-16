@@ -12,7 +12,11 @@ import { Divider } from '@mui/material';
 
 function CartWidget() {
 
-  const { cart, cantidad, total, removeItem } = useContext(CartContext);
+  const { cart, addItem, total, removeItem } = useContext(CartContext);
+
+  console.log(cart);
+  //const { cantidad } = product;
+  //console.log(product.cantidad)
 
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -34,7 +38,7 @@ function CartWidget() {
           >
           <AddShoppingCartIcon className="cart-icon" sx={{ width: 30, height: 30 }} />
           {
-            (cart.length >= 1) 
+            (cart.length >= 1)
             &&
             <p>{cart.length}</p>
           }
@@ -99,8 +103,9 @@ function CartWidget() {
                      <div className='cart-widget-p'>
                         <p>$ {prod.price}</p>
                      </div>
-                     <div className='cart-widget-p' onClick={removeItem}>
-                        <HighlightOffIcon className="cart-icon" fontSize="large" onClick={() => removeItem(prod.id)}/>
+                     <div className='cart-widget-p'>
+                     <HighlightOffIcon className="cart-icon" fontSize="large" 
+                        onClick={() => removeItem(prod.id)}/>
                      </div>
                      </MenuItem>
                      <Divider />
