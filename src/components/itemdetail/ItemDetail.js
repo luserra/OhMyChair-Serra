@@ -73,7 +73,7 @@ const ItemDetail = () => {
                         <br/>
                         <br/>
                         
-                        <HighlightOffIcon onClick={removeItem} className="cart-icon" fontSize="large" /><p>Eliminar</p>
+                        {/* <HighlightOffIcon onClick={removeItem} className="cart-icon" fontSize="large" /><p>Eliminar</p> */}
                         
                     </div>
                 )

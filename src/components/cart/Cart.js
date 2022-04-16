@@ -3,7 +3,6 @@ import CartContext from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import './Cart.css';
-import { clear } from '@testing-library/user-event/dist/clear';
 
 const Cart = ( ) => {
    
@@ -14,8 +13,6 @@ const Cart = ( ) => {
         <div className='cart-container'>
             
             <h2 className='title-container'>Carrito</h2>
-
-
             {
             (cart.length === 0)
             

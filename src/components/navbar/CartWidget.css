@@ -1,7 +1,3 @@
-.cart-widget {
-    display: grid;
-    justify-items: center;
-}
 
 .cart-icon {
     cursor: pointer;
@@ -11,4 +7,25 @@
 
 .cart-icon:hover {
     color: var(--secondary-color);
+}
+
+.cart-widget-container {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.cart-widget-title {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.cart-widget-p {
+    padding: 1rem;
+    text-align: center;
+}
+
+.cw {
+    text-align: center;
+    justify-content: center;
 }

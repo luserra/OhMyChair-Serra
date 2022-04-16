@@ -29,7 +29,8 @@ function NavBar() {
 
               <Link to='/nosotros'><li className='item-nav'>Nosotros</li></Link>
               <Link to='/contacto'><li className='item-nav'>Contacto</li></Link>
-              <Link to='/cart'><CartWidget /></Link>        
+              {/* <Link to='/cart'><CartWidget /></Link>    */}
+              <CartWidget />
               
           </ul>
         </nav>
