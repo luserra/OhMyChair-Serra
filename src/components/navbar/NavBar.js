@@ -1,21 +1,19 @@
-import { useState, useContext } from 'react';
+import { useState, useEffect} from 'react';
 import CartWidget from './CartWidget';
 import './NavBar.css'
 import { Link } from "react-router-dom";
-import CartContext from '../../context/CartContext';
 
 function NavBar() {
-
-  const { cart, setCart } = useContext(CartContext);
-  //console.log('Productos navbar: ', cart)
 
   return (
       <>
       <header>
         <nav>
-          <Link to="/">
+
+        <Link to="/">
             <img src='/assets/images/Logo-oh-my-chair.svg' alt='Logo' className='logo' />
-          </Link>  
+        </Link>
+
           <ul>
             
            <li className='category'>

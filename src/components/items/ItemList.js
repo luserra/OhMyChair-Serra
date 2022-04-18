@@ -2,35 +2,30 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './ItemList.css';
 import Item from './Item';
-import productsList from '../../data/products.js';
 import { CircularProgress } from '@mui/material';
-//import db from '../../firebase';
-//import { collection, getDocs } from 'firebase/firestore';
+import db from '../../firebase';
+import { collection, getDocs } from 'firebase/firestore';
 
 const ItemList = () => {
     
     const { category } = useParams()
     const [items, setItems] = useState([]);
 
-    const getItems = () => {
-      return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            return resolve(productsList)
-        }, 2000); 
-      })
-    } 
-
-
     // firebase
-   /*  const getItems = async () => {
-      const ItemsCollection = collection(db, 'products')
-      const productsSnapshot = await getDocs(ItemsCollection)
-      console.log('productosSnapshop: ', productsSnapshot)
-      const productList = productsSnapshot.docs.map((doc)=> {
-          console.log(doc.data());
+    const getItems = async () => {
+      const itemsCollection = collection(db, 'products')
+      const productsSnapshot = await getDocs(itemsCollection)
+      console.log('productsSnapshot: ', productsSnapshot)
+      const productList = productsSnapshot.docs.map((doc) => {
+            console.log('doc: ', doc.data())
+            let product = doc.data()
+            product.id = doc.id
+            console.log('product: ', product)
+            return product
         }
       )
-    }  */
+      return productList
+    }
 
     useEffect( () => {
       setItems([])

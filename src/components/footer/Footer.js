@@ -1,11 +1,17 @@
+import './Footer.css';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Footer = ( ) => {
    
     return(
-        <div style={{padding:'5rem 0', backgroundColor: 'black'}}>
+        <div className='footer'>
             
-            <h2 className='title-detail' style={{textTransform:'uppercase', textAlign:'center', color: 'white'}}>Footer</h2>
             
+            <p className="footer-p">©2022 Oh my chair | Todos los derechos reservados | Desarrollado por 
+                <a href='https://www.linkedin.com/in/lucia-serra/'> Lucía Serra</a></p>
+                <a href='https://www.linkedin.com/in/lucia-serra/'><LinkedInIcon className='footer-icon'></LinkedInIcon></a> 
+                <a href='https://github.com/luserra'><GitHubIcon className='footer-icon'> </GitHubIcon></a>
             
         </div>
     )

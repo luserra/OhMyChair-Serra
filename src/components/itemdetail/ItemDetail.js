@@ -1,42 +1,42 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState, useContext } from 'react';
-import productsList from '../../data/products';
 import ItemCount from './ItemCount';
 import './ItemDetail.css'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import CartContext from '../../context/CartContext';
+import db from '../../firebase';
+import { doc, getDoc } from  'firebase/firestore';
 
 
 const ItemDetail = () => {
-    // declaro constantes para filtrar por ID el producto y traerlo:
     const { id } = useParams() 
     const [product, setProduct] = useState({}) 
-
-    // declaro la cantidad inicial para después ir guardandola cada vez que se ejecuta onAdd:
     const [quantity, setQuantity] = useState(1); 
-
-    // declaro el boton 'Agregar al carrito' como true para verlo cuando entro al detalle del item
     const [button, setButton] = useState(true)
+    const { addItem, removeItem } = useContext(CartContext);
+    const navigate = useNavigate()
 
-    // con cada actualización de 'ID' ejecuto la función filtrar por id y le paso como parametros el listado de productos y el id
+    const getItem = async () => {
+        const docRef = doc(db, 'products', id);
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+            console.log("Document data:", docSnap.data());
+            let product = docSnap.data()
+            product.id = docSnap.id
+            setProduct(product)
+          } else {
+            console.log("No such document!");
+            navigate('/not-found')
+          }
+    } 
+   
     useEffect( () => {
-        filterProductById(productsList, id)
+        getItem()
     }, [id])
 
-    // declaro función filtrar por id, lo hago con un map, recorro el array
-    const filterProductById = (array , id) => {
-        return array.map( (product) => { // retorno el array de productos
-            if(product.id == id) { // si el id de producto es igual al id que del useEffect guardo el producto en el estado
-                return setProduct(product)
-            }
-        })
-    }
    
-    const { addItem, removeItem } = useContext(CartContext);
-    
-
-    // declaro la función onAdd que se va a ejecutar cada vez que clickeo en agregar al carrito desde ItemCount
     const onAdd = (quantity) => {
         if (quantity >= 1) {
             //setQuantity(quantity)
@@ -50,7 +50,7 @@ const ItemDetail = () => {
         
         <div className='container-detail'>
             <div className='items-left'>
-                <img className='img-detail' src={`/${product.image}`} alt={product.image} />
+                <img className='img-detail' src={`/assets/images/${product.image}`} alt={product.image} />
             </div>
             
             <div className='items-right'>

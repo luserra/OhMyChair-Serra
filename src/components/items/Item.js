@@ -24,7 +24,7 @@ const Item = ({ item }) => {
             
                 <div className='card-item'>
                 <Link to={`/productos/${category}/${id}`}> 
-                    <img className='img-item' src={`/${image}`} alt={image} />
+                    <img className='img-item' src={`/assets/images/${image}`} alt={image} />
                 </Link>
                     <h4 className='title-item'>{title}</h4>
                 

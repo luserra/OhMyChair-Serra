@@ -30,7 +30,7 @@ const Cart = ( ) => {
             cart.map((prod) =>(
                 <div key={ prod.id } className='ctable-container'>
                      <div className='ctable-item'>
-                        <img className='img-cart' src={`/${prod.image}`} alt={prod.image} />
+                        <img className='img-cart' src={`/assets/images/${prod.image}`} alt={prod.image} />
                     </div>
                     <div className='ctable-item'>
                         <h3>Producto</h3>
