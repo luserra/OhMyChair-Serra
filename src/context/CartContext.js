@@ -4,6 +4,7 @@ const CartContext = createContext();
 
 const CartProvider = ({children}) => {
     const [cart, setCart] = useState([]);
+    const [totalPrice, setTotalPrice] = useState(0)
 
     //console.log('cart: ', {cart});
     /*  const addProductToCart = (product) => {
@@ -30,6 +31,7 @@ const CartProvider = ({children}) => {
              console.log('el carrito estaba vacío')
              setCart(cart => [...cart, item])
          }
+         setTotalPrice(totalPrice + item.price)
     }
 
     const removeItem = (id) => {
@@ -41,9 +43,9 @@ const CartProvider = ({children}) => {
         setCart([]);
     }
 
-    const total = () => {
+   /*  const total = () => {
         return cart.reduce((acum, item) => acum = acum + (item.price * item.cantidad), 0);
-     }
+     } */
  
     const cantidad = () => {
          return cart.reduce((acum, item) => acum += item.cantidad, 0);
@@ -56,7 +58,8 @@ const CartProvider = ({children}) => {
         //addProductToCart,
         removeItem,
         clearCart,
-        total,
+        //total,
+        totalPrice,
         cantidad
         
     }

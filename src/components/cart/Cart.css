@@ -36,3 +36,26 @@
     font-size: 1.3rem;
     text-align: end;
 }
+
+.modal-container {
+    margin: 2rem;
+    text-align: center;
+}
+
+.modal-container h2 {
+    text-align: center;
+    margin: 0.3rem;
+}
+
+.modal-container p {
+    text-align: center;
+    margin: 0.4rem;
+}
+
+.input-cart {
+    font-size: 1rem;
+    margin: 0.3rem;
+    padding: 0.3rem;
+    letter-spacing: 0.02rem;
+    width: 100%;
+}
