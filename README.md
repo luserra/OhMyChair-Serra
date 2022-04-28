@@ -14,7 +14,8 @@ Clone the repository and run  / Clonar el repositorio y ejecutar:
 
 Run / Ejecutar:
 * npm start
-Open [http://localhost:3000](http://localhost:3000/) to view it in your browser. 
+
+Open [http://localhost:3000](http://localhost:3000/) to view it in your browser.
 Abrir [http://localhost:3000](http://localhost:3000/) para verla en tu navegador.
 
 ## Thank you! 
