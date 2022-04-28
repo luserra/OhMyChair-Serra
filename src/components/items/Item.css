@@ -1,10 +1,8 @@
 .card-item {
     text-align: center;
-    padding-bottom: 5rem;
     border: 1px solid var(--primary-color);
-    margin: 2rem 4rem;
-    padding: 2rem;
-    width: 25vw;
+    margin: 2rem 0;
+    padding: 2rem 0;
     border-radius: 2px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
@@ -12,7 +10,7 @@
 }
 
 .img-item {
-    width: 20vw;
+    width: 80%;
 }
 
 .title-item {
@@ -24,4 +22,10 @@
 .category-item {
     text-transform: capitalize;
     font-size: 1rem;
+}
+
+@media screen and (max-width: 950px) {
+    .img-item {
+        width: 40%;
+    }
 }

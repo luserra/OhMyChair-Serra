@@ -10,3 +10,19 @@
     display: grid;
     justify-self: center;
 }
+
+@media screen and (max-width: 950px) {
+    .list-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-items: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .list-container {
+        display: grid;
+        grid-template-columns: 100%;
+        margin: 0 2rem;
+    }
+}

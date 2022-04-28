@@ -1,10 +1,11 @@
-/* import '../../App.css'; */
 import './About.css'
 
 const AboutUs = ( ) => {
    
     return(
-        <div className='' style={{padding:'0 14rem 5rem 14rem'}}>
+        <div className='about-container'>
+
+            <img className="primary-slider" src='/assets/images/about-slider.jpg' alt='about us' />
             
             <h2 className='title-container'>Nuestra historia</h2>
                 <p className='text-about'>

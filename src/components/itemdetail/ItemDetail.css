@@ -20,3 +20,20 @@
     display: grid;
     justify-items: start;
 }
+
+.img-detail {
+    width: 50%;
+}
+
+@media screen and (max-width: 950px) {
+    
+    .cart-item-detail {
+        display: grid;
+        justify-items: center;
+    }
+    
+    .img-detail {
+        width: 75%;
+    }
+
+    }

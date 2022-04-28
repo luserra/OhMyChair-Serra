@@ -7,7 +7,6 @@ const HomePage = () => {
         <>
             <MainSection />
             <ItemListContainer firstTitle={'Productos'}/>
-            <AboutUs />
         </>
     )
 };

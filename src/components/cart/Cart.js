@@ -145,30 +145,35 @@ const Cart = ( ) => {
                                 onChange={handleChange} 
                                 value={formData.name}
                                 className='input-cart'
+                                required 
                             />
                             <br/>
-                            <input type="mail" name='email' placeholder='Email' 
+                            <input type="email" name='email' placeholder='Email' 
                                 onChange={handleChange} 
                                 value={formData.email}
                                 className='input-cart'
+                                required 
                             />
                             <br/>
                              <input type="number" name='phone' placeholder='Teléfono' 
                                 onChange={handleChange} 
                                 value={formData.phone}
                                 className='input-cart'
+                                required 
                             />
                             <br/>
                             <input type="text" name='location' placeholder='Localidad' 
                                 onChange={handleChange} 
                                 value={formData.location}
                                 className='input-cart'
+                                required 
                             />
                             <br/>
                             <input type="number" name='postal_code' placeholder='Código Postal' 
                                 onChange={handleChange} 
                                 value={formData.postal_code}
                                 className='input-cart'
+                                required 
                             />
                             <br/>
                             <button className='btn-primary' type="submit">Enviar</button>

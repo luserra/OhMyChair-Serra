@@ -1,36 +1,106 @@
 import { useState, useEffect} from 'react';
+import { Link } from "react-router-dom";
 import CartWidget from './CartWidget';
 import './NavBar.css'
-import { Link } from "react-router-dom";
+
 
 function NavBar() {
+  const [navOpen, setNavOpen] = useState(false);
+  const [scrollNav, setScrollNav] = useState(true);
+
+  const handleClick = ()=>{
+      setNavOpen(!navOpen);
+  }
+
+  const handleClickLink = () => {
+      setNavOpen(!navOpen);
+  }
+
+  useEffect(()=>{
+      window.addEventListener("scroll", handleScroll);
+  }, [])
+
+  const handleScroll = () => {
+      window.scrollY === 0 ? setScrollNav(true) : setScrollNav(false)
+  }
 
   return (
       <>
-      <header>
-        <nav>
+      <header className={scrollNav?`header`:`header header-scroll`}>
+        <nav className='navbar'>
 
         <Link to="/">
-            <img src='/assets/images/Logo-oh-my-chair.svg' alt='Logo' className='logo' />
+            <img src='/assets/images/Logo-oh-my-chair.svg' alt='Logo' className='logoMobile' />
         </Link>
+
+        <div className="burger-container" onClick={handleClick}><div className={navOpen? 'burger burger-close': 'burger burger-branding'} ></div></div>
+        <div className={navOpen? 'navbar-responsive open': 'navbar-responsive'}>
+          <Link to="/">
+            <img src='/assets/images/Logo-oh-my-chair.svg' alt='logo' className="logo"/>
+          </Link>
+
+        <div className="nav-text">
 
           <ul>
             
            <li className='category'>
              <p className='item-nav'>Productos</p>
               <ul className="submenu">
-                  <li><Link to="/productos/sillas" className="item-nav">Sillas</Link></li>
-                  <li><Link to="/productos/sillones" className="item-nav">Sillones</Link></li>
-                  <li> <Link to='/productos/' className="item-nav">Ver todos</Link></li>
+                  <li>
+                    <Link 
+                      to="/productos/sillas" 
+                      className="item-nav"
+                      >
+                      Sillas
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/productos/sillones" 
+                      className="item-nav"
+                      >
+                      Sillones
+                    </Link>
+                  </li>
+                  <li> 
+                    <Link 
+                      to='/productos/' 
+                      className="item-nav"
+                      >
+                      Ver todos
+                    </Link>
+                  </li>
               </ul>
            </li>
+           
+           <li>
+              <Link 
+              to='/nosotros'
+              spy={true}
+              smooth={true}
+              offset={-120}
+              duration={600}
+              className="item-nav"
+              onClick={handleClickLink}
+              >
+                Nosotros
+              </Link>
+            </li>
 
-              <Link to='/nosotros'><li className='item-nav'>Nosotros</li></Link>
-              <Link to='/contacto'><li className='item-nav'>Contacto</li></Link>
-              {/* <Link to='/cart'><CartWidget /></Link>    */}
+            <li>
+              <Link 
+                to='/contacto'
+                className='item-nav link'
+                
+              >
+                Contacto
+              </Link>
+            </li>
               <CartWidget />
               
           </ul>
+          </div>
+          </div>
         </nav>
       </header>
        

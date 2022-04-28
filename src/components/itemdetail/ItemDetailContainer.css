@@ -4,3 +4,22 @@
     justify-items: start;
     grid-template-columns: 50% 50%;
 }
+
+
+@media screen and (max-width: 950px) {
+
+.container-detail {
+    margin: 2rem;
+    display: grid;
+    grid-template: inherit;
+    justify-items: center;
+    text-align: center;
+    
+}
+
+.cart-item-detail {
+    display: grid;
+    justify-items: center;
+}
+
+}

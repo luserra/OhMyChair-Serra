@@ -1,9 +1,9 @@
-import { textAlign } from "@mui/system";
+import Form from "../components/form/Form";
 
 const ContactPage = () => {
     return (
         <>
-            <h2 className='title-container' style={{textAlign:'center'}}>Próximamente podrás contactarnos (: </h2>
+            <Form />
         </>
     )
 };
