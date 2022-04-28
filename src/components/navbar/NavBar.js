@@ -12,10 +12,6 @@ function NavBar() {
       setNavOpen(!navOpen);
   }
 
-  const handleClickLink = () => {
-      setNavOpen(!navOpen);
-  }
-
   useEffect(()=>{
       window.addEventListener("scroll", handleScroll);
   }, [])
@@ -40,9 +36,7 @@ function NavBar() {
           </Link>
 
         <div className="nav-text">
-
-          <ul>
-            
+          <ul> 
            <li className='category'>
              <p className='item-nav'>Productos</p>
               <ul className="submenu">
@@ -76,12 +70,7 @@ function NavBar() {
            <li>
               <Link 
               to='/nosotros'
-              spy={true}
-              smooth={true}
-              offset={-120}
-              duration={600}
               className="item-nav"
-              onClick={handleClickLink}
               >
                 Nosotros
               </Link>
@@ -90,14 +79,12 @@ function NavBar() {
             <li>
               <Link 
                 to='/contacto'
-                className='item-nav link'
-                
+                className='item-nav link'  
               >
                 Contacto
               </Link>
             </li>
-              <CartWidget />
-              
+              <CartWidget /> 
           </ul>
           </div>
           </div>

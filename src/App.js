@@ -18,7 +18,6 @@ import NotFoundPage from './pages/NotFound';
 import { CartProvider } from './context/CartContext';
 
 
-
 function App() {
 
   return (

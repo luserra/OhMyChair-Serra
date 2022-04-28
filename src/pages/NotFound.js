@@ -1,7 +1,7 @@
 const NotFoundPage = () => {
     return (
         <>
-            <h2 className='title-container' style={{textAlign:'center'}}>ERROR 404 :(</h2>
+            <h2 className='title-container'>ERROR 404 :(</h2>
         </>
     )
 };

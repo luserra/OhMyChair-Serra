@@ -6,19 +6,12 @@ const CartProvider = ({children}) => {
     const [cart, setCart] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0)
 
-    //console.log('cart: ', {cart});
-    /*  const addProductToCart = (product) => {
-        //console.log('Producto agregado: ', product)
-        setCart(cart => [...cart, product]) // trae los productos que ya agregué y suma el nuevo
-    } */
-
     const isInCart = (id) =>{
         return cart.some( product => product.id === id)  
     }
 
     const addItem = (item) => {
         if ( isInCart(item.id) ) {
-            console.log('el carrito tiene productos')
             const product = cart.find((p) => p.id === item.id);
             const { cantidad } = product;
             
@@ -28,24 +21,22 @@ const CartProvider = ({children}) => {
              console.log('cantidad total: ', cantidad)
  
          } else {
-             console.log('el carrito estaba vacío')
              setCart(cart => [...cart, item])
          }
-         setTotalPrice(totalPrice + item.price)
+         setTotalPrice(totalPrice + item.price * item.cantidad)
     }
 
-    const removeItem = (id) => {
+    const removeItem = (id, item) => {
         setCart(cart.filter(p => p.id !== id));
-        console.log('Elimino el producto')
     }
 
     const clearCart = () => {
         setCart([]);
     }
 
-   /*  const total = () => {
+    const total = () => {
         return cart.reduce((acum, item) => acum = acum + (item.price * item.cantidad), 0);
-     } */
+     }
  
     const cantidad = () => {
          return cart.reduce((acum, item) => acum += item.cantidad, 0);
@@ -55,10 +46,9 @@ const CartProvider = ({children}) => {
         cart,
         isInCart,
         addItem,
-        //addProductToCart,
         removeItem,
         clearCart,
-        //total,
+        total,
         totalPrice,
         cantidad
         

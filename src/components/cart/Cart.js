@@ -9,7 +9,7 @@ import { addDoc, collection } from 'firebase/firestore';
 
 const Cart = ( ) => {
    
-    const { cart, clearCart, removeItem, totalPrice } = useContext(CartContext);
+    const { cart, clearCart, removeItem, totalPrice, total } = useContext(CartContext);
     //console.log(cart)
     const [openModal, setOpenModal] = useState(false)
     const [formData, setFormData] = useState({

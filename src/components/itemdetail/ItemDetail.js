@@ -3,7 +3,6 @@ import { useEffect, useState, useContext } from 'react';
 import ItemCount from './ItemCount';
 import './ItemDetail.css'
 import { Link, useNavigate } from "react-router-dom";
-import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import CartContext from '../../context/CartContext';
 import db from '../../firebase';
 import { doc, getDoc } from  'firebase/firestore';
@@ -39,10 +38,8 @@ const ItemDetail = () => {
    
     const onAdd = (quantity) => {
         if (quantity >= 1) {
-            //setQuantity(quantity)
             addItem( {...product, cantidad: quantity} )
-            setButton(false)
-            console.log('cantidad que agrego: ', quantity)            
+            setButton(false)         
         }
     }    
     
@@ -72,17 +69,10 @@ const ItemDetail = () => {
                         </Link>
                         <br/>
                         <br/>
-                        
-                        {/* <HighlightOffIcon onClick={removeItem} className="cart-icon" fontSize="large" /><p>Eliminar</p> */}
-                        
                     </div>
                 )
                 }
-
                 </div> 
-
-             
-
             </div>
         </div>      
         
