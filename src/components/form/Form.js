@@ -7,7 +7,7 @@ const Form = () => {
         <h2 className='title-container'>Contacto</h2>
             <p className='text-contact'>Dejanos tu mensaje y nos contactaremos a la brevedad</p>
             
-            <form className="form">
+            <form className="form" action="https://formsubmit.co/alu.handbags@gmail.com" method="POST">
                 
                 <label htmlFor="name" className="form-label"></label>
                     <input
